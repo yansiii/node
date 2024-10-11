@@ -1,9 +1,11 @@
 const express = require("express")
 const port = 3022;
+const path = require("path")
 
 const app = express()
 app.set("view engine" , "ejs")
 app.use(express.urlencoded());
+app.use("/public", express.static(path.join(__dirname,"public")))
 
 let students = [
     {
@@ -11,6 +13,7 @@ let students = [
         name : "yansi",
         subject : "react",
         city : "surat"
+
     },
     {
         id : 2,
