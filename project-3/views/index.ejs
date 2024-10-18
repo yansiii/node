@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body> 
+    <div class="a">
+   
+    <center>
+       
+    <h1 >Book's Details</h1>
+    <form action="/insert" method="post">
+     <label for="">Book Name : </label>
+     <input type="text"  placeholder="enter name" name="name"> <br><br>
+     <label for=""> Author Name : </label>
+     <input type="text"  placeholder="author name" name="author"> <br><br>
+     <label for=""> Year of Publication : </label>
+     <input type="text"  placeholder="enter year" name="year"> <br><br>
+     <label for=""> Price : </label>
+     <input type="text"  placeholder="enter price" name="price"> <br><br>
+     
+     <button class="b" type="submit">Add </button>
+    </form> 
+<p>----------------------------------------------------------------------------------------------------------------------------------------</p>  
+     <table border="1" width="90%"> 
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Year </th>
+                <th>Price</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% data.map((e,i)=>{ %>
+                <tr>
+                    <td> <%= e.name %></td>
+                    <td> <%= e.author %></td>
+                    <td> <%= e.year %></td>
+                    <td> <%= e.price %></td>
+    
+                <td>
+                    <a href="/editData?id=<%=e.id%>"><button class="c">Edit</button></a>
+                </td>
+    
+                <td>
+                    <a href="/deleteData?id=<%=e.id%>"><button class="d">Delete</button></a>
+                </td>
+            </tr>
+    
+          <%  }) %>
+        </tbody>
+    </table>
+    </center>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    background-color:white;
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(https://www.printasia.in/media/catalog/product/a/-/a-n-3_book_shop_.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.a{
+    width: 70%;
+    height: 530px;
+    /* border: 1px solid black; */
+    /* margin-left: 10%; */
+    /* background-color: black; */
+    color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+    margin-top: 30px;
+
+}
+h1{
+    color: white;
+    text-shadow: 3px 3px 4px #e92d2d;
+}
+input{
+    height: 20px;
+}
+.b{
+    width: 90px;
+    height: 32px;
+    font-size: 16px;
+    background-color: green;
+}
+th{
+    color: rgb(17, 15, 15);
+    font-size: 20px;
+    height: 30px;
+}
+td{
+    height: 25px;
+}

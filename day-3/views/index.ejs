@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body> 
+   
+    <center>
+        
+    <h1 >Form</h1>
+    <form action="/insert" method="post">
+     <label for=""> Name : </label>
+     <input type="text"  placeholder="enter name" name="name"> <br><br>
+     <label for=""> Subject : </label>
+     <input type="text"  placeholder="enter subject" name="subject"> <br><br>
+     
+     <button type="submit">Add </button>
+    </form> <br>
+
+     <table border="1" width="50%"> 
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>subject</th>
+                <th colspan="2">action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% data.map((e,i)=>{ %>
+                <tr>
+                    <td> <%= e.name %></td>
+                    <td> <%= e.subject %></td>
+    
+                <td>
+                    <a href="/editData?id=<%=e.id%>"><button>Edit</button></a>
+                </td>
+    
+                <td>
+                    <a href="/deleteData?id=<%=e.id%>"><button>Delete</button></a>
+                </td>
+            </tr>
+    
+          <%  }) %>
+        </tbody>
+    </table>
+    </center>
+
+</body>
+</html>
