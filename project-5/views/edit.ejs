@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <center>
+    <form action="/update" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<%= singleData.id %>" />
+        <input type="file" name="image">
+
+        <img src="<%singleData.image%>" alt="">
+
+        <label for="">Movie Name:</label>
+        <input type="text" name="name" value="<%= singleData.name %>">
+
+        <label for="">Movie Type:</label>
+        <input type="text" name="type" value="<%= singleData.type %>">
+
+        
+        <button type="submit">Update</button>
+    </form>
+    </center>
+</body>
+</html>

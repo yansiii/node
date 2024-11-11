@@ -10,11 +10,11 @@ const schema = mongoose.Schema({
         required : true
     },
     year :{
-        type : Number,
+        type : String,
         required : true
     },
     price :{
-        type : Number,
+        type : String,
         required : true
     }
 })
