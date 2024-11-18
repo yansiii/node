@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/update" method="post">
+        <input type="text" hidden name="id" value="<%= singleData.id %>">
+
+        <label for="">Activity Name</label>
+        <input type="text" name="activityName" value="<%= singleData.activityName %>"> <br> <br>
+
+        <label for="">Date</label>
+        <input type="text" name="date" value="<%= singleData.date %>"> <br> <br>
+
+        <label for="">Time</label>
+        <input type="text" name="time" value="<%= singleData.time %>"> <br> <br>
+
+        <label for="">Activity Type</label>
+        <input type="text" name="activityType" value="<%= singleData.activityType %>"> <br> <br>
+
+        <label for="">Sport</label>
+        <input type="text" name="sport" value="<%= singleData.sport %>"> <br> <br>
+
+        <label for="">Notes</label>
+        <input type="text" name="notes" value="<%= singleData.notes %>"> <br> <br>
+
+        <button type="submit">Update</button>
+    </form>
+    
+</body>
+</html>

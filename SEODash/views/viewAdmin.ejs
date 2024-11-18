@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f9;">
+    
+     <div class="card"  style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="card-body">
+             
+
+              <div class="table-responsive" style="margin-top: 20px;">
+                <table class="table text-nowrap align-middle mb-0" style="width: 100%; border-collapse: collapse; background-color: #f9f9f9; text-align: left;">
+                  <thead>
+                    <tr class="border-2 border-bottom border-primary border-0" style="background-color: #007bff; color: #fff; text-align: center;"> 
+                      <th scope="col" style="padding: 10px; border: 1px solid #ddd;" class="ps-0">Id</th>
+                      <th scope="col" style="padding: 10px; border: 1px solid #ddd;" class="text-center">Activity Name</th>
+                    
+                      <th scope="col" style="padding: 10px; border: 1px solid #ddd;" >Date</th>
+                      <th scope="col" style="padding: 10px; border: 1px solid #ddd;" class="text-center">Time</th>
+                      <th scope="col"style="padding: 10px; border: 1px solid #ddd;" class="text-center">ActivityType</th>
+                      <th scope="col"style="padding: 10px; border: 1px solid #ddd;" class="text-center">Sport</th>
+                      <th scope="col" style="padding: 10px; border: 1px solid #ddd;" class="text-center">Notes</th>
+                      <th scope="col" style="padding: 10px; border: 1px solid #ddd;" class="text-center">Action</th>
+                   
+                    </tr>
+                  </thead>
+                   <tbody>
+                    <% UID.map((e,i)=>{ %>
+                        <tr style="text-align: center">
+                        <th scope="row"><%= i+1 %></th>
+                        <td><%= e.activityName %></td>
+                        <td><%= e.date %></td>
+                        <td><%= e.time %></td>
+                        <td><%= e.activityType %></td>
+                        <td><%= e.sport %></td>
+                        <td><%= e.notes %></td>
+                        <td>
+                            <a href="/edit?id=<%=e.id%>"><button>Edit</button></a>
+                            <a href="/delete?id=<%=e.id%>"><button>Delete</button></a>
+                        </td>
+                    </tr>
+
+                   <% }) %>
+                   </tbody>
+                </table>
+
+                <a href="/addAdmin">Add New Admin</a>
+              </div>
+            </div>
+          </div>
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeoDash Free Bootstrap Admin Template by Adminmart</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/seodashlogo.png" />
+  <link rel="stylesheet" href="../../node_modules/simplebar/dist/simplebar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <%- include("aside") %>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <%- include("header") %>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <div class="card">
+        
+        <div class="card-body" style="padding: 20px; background-color: #f8f9fa; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h5 class="card-title fw-semibold mb-4" style="text-align: center; color: #007bff;">Activity Schedule Form</h5>
+            <div class="card" style="border: none;">
+                <div class="card-body" style="padding: 20px; background-color: #ffffff; border-radius: 8px;">
+                    <form>
+                        <div class="mb-3" style="margin-bottom: 15px;">
+                            <label for="activity-name" style="font-weight: bold; display: block;">Activity Name:</label>
+                            <input type="text" id="activity-name" name="activity_name" placeholder="Enter the activity name" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;">
+                        </div>
+                        <div class="mb-3" style="margin-bottom: 15px;">
+                            <label for="date" style="font-weight: bold; display: block;">Date:</label>
+                            <input type="date" id="date" name="date" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;">
+                        </div>
+                        <div class="mb-3" style="margin-bottom: 15px;">
+                            <label for="time" style="font-weight: bold; display: block;">Time:</label>
+                            <input type="time" id="time" name="time" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;">
+                        </div>
+                        <div class="mb-3" style="margin-bottom: 15px;">
+                            <label style="font-weight: bold;">Type of Activity:</label>
+                            <div style="margin-top: 10px;">
+                                <input type="radio" id="indoor" name="activity_type" value="Indoor" required>
+                                <label for="indoor" style="display:inline; font-weight: normal; margin-right: 10px;">Indoor</label>
+                                <input type="radio" id="outdoor" name="activity_type" value="Outdoor">
+                                <label for="outdoor" style="display:inline; font-weight: normal;">Outdoor</label>
+                            </div>
+                        </div>
+                        <div class="mb-3" style="margin-bottom: 15px;">
+                            <label for="sport" style="font-weight: bold; display: block;">Choose a Sport:</label>
+                            <select id="sport" name="sport" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;">
+                                <option value="">--Select a sport--</option>
+                                <option value="soccer">Soccer</option>
+                                <option value="basketball">Basketball</option>
+                                <option value="badminton">Badminton</option>
+                                <option value="cricket">Cricket</option>
+                                <option value="tennis">Tennis</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" style="margin-bottom: 15px;">
+                            <label for="notes" style="font-weight: bold; display: block;">Additional Notes:</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Enter any additional details"
+                                style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px; background-color: #007bff; border: none; border-radius: 4px;">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="py-6 px-6 text-center">
+          <p class="mb-0 fs-4">Design and Developed by <a href="https://adminmart.com/" target="_blank"
+              class="pe-1 text-primary text-decoration-underline">AdminMart.com</a> Distributed by <a href="https://themewagon.com/" target="_blank"
+              class="pe-1 text-primary text-decoration-underline">ThemeWagon</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
