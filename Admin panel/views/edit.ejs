@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form-horizontal" method="post" action="/update" enctype="multipart/form-data">
+        <div class="card-body">
+            <input type="hidden" name="id" value="<%= singleData.id %>">
+           
+           
+            <label for="fname" class="col-sm-3 text-right control-label col-form-label"> Name</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="name" name="name" value="<%= singleData.name %>" placeholder="Enter Name Here">
+            </div>
+               
+           
+            <div class="form-group row">
+                <label for="lname" class="col-sm-3 text-right control-label col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="email" name="email"value="<%= singleData.email %>" placeholder=" Email Here">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="lname" class="col-sm-3 text-right control-label col-form-label">Password</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" id="password" placeholder="Password Here" name="password" value="<%= singleData.password %>">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3">City</label>
+                <div class="col-md-9">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation1" name="city"  value="<%= singleData.city %>" required >
+                        <label class="custom-control-label" for="customControlValidation1" >Jamnagar</label>
+                    </div>
+                     <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="city" value="<%= singleData.city %>" required>
+                        <label class="custom-control-label" for="customControlValidation2">Vadodra</label>
+                    </div>
+                     <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation3" name="city" value="<%= singleData.city %>" required>
+                        <label class="custom-control-label" for="customControlValidation3">Surat</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3">Hobby</label>
+                <div class="col-md-9">
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing1" name="hobby" value="Reading">
+                        <label class="custom-control-label" for="customControlAutosizing1">Reading</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing2" name="hobby" value="Travelling">
+                        <label class="custom-control-label" for="customControlAutosizing2">Travelling</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing3" name="hobby" value="Singing">
+                        <label class="custom-control-label" for="customControlAutosizing3" >Singing</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-md-3 m-t-15"> Select Lunguage</label>
+                <div class="col-md-9">
+                    <select class="select2 form-control custom-select" style="width: 100%; height:36px;">
+                        <option hidden>Select</option>
+                        <input type="text" hidden name="lunguage" value="<%= singleData.lunguage %>"  >
+                       
+                            <option  value="Hindi">Hindi</option>
+                            <option value="English">English</option>
+                            <option value="Gujarati">Gujarati</option>
+                        
+                       
+                      
+                      
+                    </select>
+                </div>
+            </div>
+
+            
+
+
+
+
+            <div class="form-group row">
+                <label class="col-md-3">File Upload</label>
+                <div class="col-md-9">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="validatedCustomFile"  name="image">
+                        <img src="<%= singleData.image %>" alt="">
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+           
+        </div>
+        <div class="border-top">
+            <div class="card-body">
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
