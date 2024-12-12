@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/catupdate" method="post" enctype="multipart/form-data">
+        <input type="text" hidden name="id" value="<%= singleData.id %>">
+        <input type="text" name="catName" value="<%= singleData.catName %>">
+        <img src="<%= singleData.image %>" alt="">
+        <button type="submit">Update</button>
+
+    </form>
+</body>
+</html>

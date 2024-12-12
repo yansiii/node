@@ -11,7 +11,11 @@ route.get("/login",indexCtl.login)
 route.post("/login",  indexCtl.loginAdmin)
 route.get("/logout",indexCtl.logout)
 route.get("/dashboard",passport.checkAuth,  indexCtl.dashboard) 
-route.get("/addadmin", passport.checkAuth, indexCtl.addadmin)
+route.get("/addadmin",passport.checkAuth,indexCtl.addadmin)
 route.get("/viewadmin",passport.checkAuth, indexCtl.viewadmin)
+route.get("/delete",indexCtl.deleteData)
+route.get("/edit",indexCtl.editData)
+route.post("/update",indexCtl.updateData)
+
 route.post("/addadmin",passport.checkAuth, indexCtl.addAdminData)
 module.exports = route

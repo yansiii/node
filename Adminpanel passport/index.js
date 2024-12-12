@@ -1,9 +1,7 @@
 const express = require("express")
-const port = 8888;
+const port = 8880;
 const path = require("path")
 const db = require("./Config/db")
-
-
 
 const app = express()
 app.set("view engine","ejs")
@@ -24,8 +22,6 @@ app.use(session ({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-
 
 app.use("/",require("./routes/route"))
 
